@@ -8,7 +8,6 @@ package OOP;
  * 2. Zelda kaotab nii palju elusid kui kollil elusid on.
  */
 
-//Väike muudatus
 public class Legend {
     public static void main(String[] args) {
         int kollilElusid;

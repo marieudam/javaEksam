@@ -23,10 +23,8 @@ public class Kikilips {
     public static void main(String[] args) {
         int ridasid = 9;
         int veerge = 9;
-        int loendur;
         String[][] tabel = new String[ridasid][veerge];
         for (int i = 0; i < tabel.length; i++) {
-            loendur = 0;
             for (int j = 0; j < tabel[i].length; j++) {
                 if (i >= 4){
                     if (j >= 0+i || j <= 8-i){
@@ -49,13 +47,13 @@ public class Kikilips {
 
     }
 
-    // Lihtsalt abiline meetod, et maatriksit välja printida
-    private static void printMaatriks(int[][] laud) {
-        for (int i = 0; i < laud.length; i++) {
-            System.out.println(Arrays.toString(laud[i]));
-        }
-        System.out.println("");
-    }
+//    // Lihtsalt abiline meetod, et maatriksit välja printida
+//    private static void printMaatriks(int[][] laud) {
+//        for (int i = 0; i < laud.length; i++) {
+//            System.out.println(Arrays.toString(laud[i]));
+//        }
+//        System.out.println("");
+//    }
 
     private static void printMaatriks(String[][] laud) {
         for (int i = 0; i < laud.length; i++) {
