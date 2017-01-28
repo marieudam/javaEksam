@@ -10,6 +10,7 @@ package OOP;
  */
 public class Kirjanik {
     public static void main(String[] args) {
+
         int tindiKogus = 60;
 
         Pastakas pastakas = new Pastakas(tindiKogus);
