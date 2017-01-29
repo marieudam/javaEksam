@@ -29,7 +29,7 @@ public class Korter {
     }
 
     public void lahkus(String nimi) {
-        saabujad.remove(1);
+        saabujad.remove(nimi);
 
     }
 
