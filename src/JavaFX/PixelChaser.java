@@ -31,21 +31,22 @@ public class PixelChaser extends Application {
 
         ArrayList<Rectangle> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            Rectangle ristkulik = new Rectangle(160, 80, 160, 80);
-            ristkulik.setTranslateX(Math.random() * 500);
-            ristkulik.setTranslateY(Math.random() * 500);
-            kujund.getChildren().add(ristkulik);
-            list.add(ristkulik);
-            ristkulik.setFill(Color.BLUE);
+            Rectangle rectangle = new Rectangle(Math.random()*450,Math.random()*450, 100, 100);
+            rectangle.setFill(Color.rgb((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+            kujund.getChildren().add(rectangle);
+            list.add(rectangle);
         }
-        for (int i = 0; i < list.size() ; i++) {
-            Rectangle uusRistkulik = list.get(i);
-            uusRistkulik.setOnMouseClicked(mouseEvent -> {
-                if (mouseEvent.getClickCount() == 2) {
-                    uusRistkulik.setVisible(false);
+        for (int i = 0; i <list.size() ; i++) {
+            Rectangle changeSize = list.get(i);
+            changeSize.setOnMouseClicked(event -> {
+                if (changeSize.getId() == "klikitud") {
+                    changeSize.setVisible(false);
                 }
-                uusRistkulik.setHeight(40);
-                uusRistkulik.setWidth(80);
+                else {
+                    changeSize.setHeight(50);
+                    changeSize.setWidth(50);
+                }
+                changeSize.setId("klikitud");
             });
         }
     }
