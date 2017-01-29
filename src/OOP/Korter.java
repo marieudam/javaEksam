@@ -7,16 +7,30 @@ import java.util.ArrayList;
  */
 public class Korter {
 
-    public void saabus(String taavi) {
+    ArrayList<String> saabujad = new ArrayList<>();
+    int mahutavus;
+
+    public Korter(int mahutab) {
+        this.mahutavus = mahutab;
+    }
+
+    public void saabus(String nimi) {
+        if (saabujad.size() < 10) {
+            saabujad.add(saabujad.size(), nimi);
+        }
     }
 
     public void prindiKylalisteArv() {
+        System.out.println("Külaliste arv on: " + this.saabujad.size());
     }
 
     public void prindiPaljuVeelMahub() {
+        System.out.println("Korter mahutab: " + (this.mahutavus - this.saabujad.size()));
     }
 
-    public void lahkus(String taavi) {
+    public void lahkus(String nimi) {
+        saabujad.remove(1);
+
     }
 
 }
